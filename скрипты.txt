@@ -1,0 +1,6 @@
+Скрипт для теста"Новое имя не равно старому".
+pm.test(" new name not eql. old name", function () {
+var jsonData = JSON.parse(responseBody);
+pm.expect(pm.collectionVariables.get("name")).to.not.eql(jsonData.name);
+pm.collectionVariables.set("name" , jsondata.name);
+});
